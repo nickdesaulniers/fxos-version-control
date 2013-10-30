@@ -1,0 +1,6 @@
+[submodule "addon-sdk"]
+	path = addon-sdk
+	url = https://github.com/mozilla/addon-sdk.git
+[submodule "packages/jetpack-subprocess"]
+	path = packages/jetpack-subprocess
+url=https://github.com/nickdesaulniers/jetpack-subprocess.git
