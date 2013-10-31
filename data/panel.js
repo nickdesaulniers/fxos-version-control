@@ -56,3 +56,5 @@ self.port.on("device", function (message) {
           .appendChild(document.createTextNode(message.product_name));
   addButtons(message.product_name);
 });
+
+self.postMessage({ type: "test", data: "hello world" });
