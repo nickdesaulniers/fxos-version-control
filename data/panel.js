@@ -29,7 +29,7 @@ function addButtons (device) {
       deviceImages = ["1.2"];
       break;
     default:
-      console.log("unrecognized device:" + device + "X");
+      console.log("unrecognized device: " + device);
       return;
   }
 

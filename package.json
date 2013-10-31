@@ -2,14 +2,15 @@
   "license": "",
   "description": "Update or rollback your version of Firefox OS on device",
   "contributors": [],
-  "author": "ndesaulniers",
+  "author": "Nick Desaulniers <nick@mozilla.com>",
   "url": "",
   "dependencies": [
     "api-utils",
     "addon-kit",
-    "subprocess"
+    "subprocess",
+    "menuitems"
   ],
-  "version": "initial.rev1",
+  "version": "0.1",
   "lib": "lib",
   "fullName": "FxOS Version Control",
   "main": "main",
