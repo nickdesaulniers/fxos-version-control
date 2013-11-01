@@ -1,5 +1,12 @@
+const DEBUG = true;
+
+function send (type, data) {
+  if (DEBUG) console.log("panel.js sending a " + type + " message");
+  self.postMessage({ type: type, data: data });
+};
+
 function fetch () {
-  self.postMessage({ type: "downloadAdb" });
+  send("downloadAdb");
 };
 
 self.port.on("initialPrefs", function (data) {
@@ -13,3 +20,9 @@ self.port.on("initialPrefs", function (data) {
   }
   console.log(JSON.stringify(data));
 });
+
+self.port.on("download", function (data) {
+  if (DEBUG) console.log("panel.js received a download event: " + data);
+});
+
+send("initialPrefs");
