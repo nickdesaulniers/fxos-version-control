@@ -1,4 +1,4 @@
-const DEBUG = true;
+const DEBUG = false;
 
 function send (type, data) {
   if (DEBUG) console.log("panel.js sending a " + type + " message");
@@ -18,7 +18,6 @@ self.port.on("initialPrefs", function (data) {
   if (!data.fastbootPath) {
     document.getElementById("fastboot_install").style.border = "5px solid red";
   }
-  console.log(JSON.stringify(data));
 });
 
 self.port.on("download", function (data) {
