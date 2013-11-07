@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="panel.css"/>
   </head>
   <body>
     <h1>Firefox OS Version Control</h1>
@@ -9,11 +10,15 @@
       <h2>ADB</h2>
       <button id="adb_browse">Browse</button>
       <button id="adb_install">Install</button>
+      <progress id="adb_progress" value="0" class="hidden"></progress>
+      <pre id="adb_path"></pre>
     </div>
     <div>
       <h2>FastBoot</h2>
       <button id="fastboot_browse">Browse</button>
       <button id="fastboot_install">Install</button>
+      <progress id="fastboot_progress" value="0" class="hidden"></progress>
+      <pre id="fastboot_path"></pre>
     </div>
     <div>
       <h2 id="my_device"></h2>
