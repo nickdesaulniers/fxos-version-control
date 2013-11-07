@@ -20,6 +20,7 @@ function onInitialPrefs(data) {
     b.style.border = "5px solid red";
   }
   b.addEventListener("click", fetch);
+  $("adb_browse").addEventListener("click", send.bind(null, "pickAdb"));
   if (!data.fastbootPath) {
     $("fastboot_install").style.border = "5px solid red";
   }
