@@ -25,6 +25,9 @@ function onInitialPrefs(data) {
 
   if (data.adbPath) {
     $("adb_path").textContent = data.adbPath;
+    let deviceDetect = $("device_detect");
+    deviceDetect.classList.remove("hidden");
+    deviceDetect.addEventListener("click", send.bind(null, "detect"));
   } else {
     adbInstall.style.border = "5px solid red";
   }
@@ -49,8 +52,13 @@ function onDownloadDone (data) {
   $(data.tool + "_path").textContent = data.path;
 };
 
+function onDeviceDetected (data) {
+  alert(data);
+};
+
 self.port.on("initialPrefs", onInitialPrefs);
 self.port.on("download", onDownload);
 self.port.on("downloadDone", onDownloadDone);
+self.port.on("deviceDetected", onDeviceDetected);
 
 send("initialPrefs");
